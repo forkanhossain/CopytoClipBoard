@@ -1,0 +1,28 @@
+<input type="text" value="https://example.com/refer-a-friend/" id="myInput" style="width: 60%; float: left; font-size: 18px; background: #ffffff;" class="refer-friend-input">
+<div class="refer-friend-btn">
+<button onclick="myFunction()" style="border: none; display: grid; margin: auto;">Copy Link</button>
+</div>
+<p id="copyLink" style="display: block; font-size: 16px; color: #ffffff; margin: auto; text-align: center;"></p>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("Copy");
+  document.getElementById("copyLink").innerHTML = "Copied the Link!"
+  //alert("Copied the link: " + copyText.value + " Just Share it");
+}    
+</script>
+
+// For responsive css
+<style>
+@media screen and (max-width: 959px) {
+  .refer-friend-input{
+      width: 100% !important;
+      margin-bottom: 10px;
+  }
+  .refer-friend-btn{
+      margin: 10px;
+  }
+}
+</style>
